@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Chucky — Portfolio</title>
+  <meta name="description" content="Chucky — modern + myth portfolio showcasing previous work." />
+  <link rel="stylesheet" href="/assets/styles.css">
+  <link rel="icon" href="/assets/logo.svg" type="image/svg+xml">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="/">
+        <img src="/assets/logo.svg" alt="Chucky" class="logo">
+        <span class="title">Chucky</span>
+      </a>
+      <nav class="nav">
+        <a href="#about">About</a>
+        <a href="#work">Work</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <h1 class="hero-title">Chucky — modern craftsmanship, mythic storytelling</h1>
+        <p class="hero-sub">I build elegant, fast websites and apps with a modern aesthetic and a mythic touch. Below is a selection of previous work — replace these with your real projects or tell me and I’ll add them for you.</p>
+        <p class="cta"><a class="btn" href="#projects">See my work</a></p>
+      </div>
+    </section>
+
+    <section id="about" class="container about">
+      <h2>About</h2>
+      <p>Designer & developer blending minimal modern design with myth-inspired storytelling. I focus on clarity, performance, and memorable visuals.</p>
+      <ul class="skills">
+        <li>Front-end: HTML, CSS, JavaScript</li>
+        <li>Frameworks: React / Vue / Svelte</li>
+        <li>Design: UI/UX, branding, motion</li>
+      </ul>
+    </section>
+
+    <section id="work" class="container work">
+      <h2>Previous work</h2>
+      <div class="grid">
+        <article class="card">
+          <h3>Project A — Aurora Atlas</h3>
+          <p>A modern data-driven interface with interactive maps and smooth transitions. I led front-end development and performance tuning.</p>
+          <p class="tagline">Tech: React, Mapbox, TypeScript</p>
+        </article>
+
+        <article class="card">
+          <h3>Project B — Ember Market</h3>
+          <p>E-commerce redesign with improved conversion funnels and accessible checkout flows. Implemented A/B tests and analytics.</p>
+          <p class="tagline">Tech: Next.js, Stripe, Vercel</p>
+        </article>
+
+        <article class="card">
+          <h3>Project C — Lumen Docs</h3>
+          <p>Documentation system with live examples and a searchable component library. Built a light-weight documentation framework.</p>
+          <p class="tagline">Tech: Svelte, Markdown, Netlify</p>
+        </article>
+      </div>
+      <p class="note">These are placeholders — tell me your real project names, links, descriptions, and I’ll update them.</p>
+    </section>
+
+    <section id="projects" class="container projects">
+      <h2>Featured projects</h2>
+      <div class="project-cards">
+        <div class="project">
+          <div class="project-media">🔮</div>
+          <div>
+            <h3>Mythic Landing — Visual narrative</h3>
+            <p>A landing experience that uses layered parallax and subtle motion to tell a product story.</p>
+            <p class="meta">Role: Design & front-end • Live: —</p>
+          </div>
+        </div>
+
+        <div class="project">
+          <div class="project-media">⚔️</div>
+          <div>
+            <h3>Forge Platform — Dashboard</h3>
+            <p>Admin dashboard with optimized data tables and custom charts for real-time monitoring.</p>
+            <p class="meta">Role: Front-end • Live: —</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="container contact">
+      <h2>Contact</h2>
+      <p>Want this style for your project or want me to populate the portfolio with real examples? Email me at <a href="mailto:hello@chucky.dev">hello@chucky.dev</a> or open an issue on this repo.</p>
+      <p class="small">Tip: To replace placeholder text, edit <code>index.html</code> in this repository or tell me the details and I’ll update it for you.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> Chucky — Crafted with modern myth.</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
