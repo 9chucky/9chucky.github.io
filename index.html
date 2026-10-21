@@ -25,6 +25,9 @@
         <a href="#projects">Projects</a>
         <a href="#contact">Contact</a>
       </nav>
+      <div class="header-controls">
+        <button id="theme-toggle" class="btn small" aria-pressed="false" title="Toggle theme">Retro Dark</button>
+      </div>
     </div>
   </header>
 
@@ -90,6 +93,27 @@
             <p>Admin dashboard with optimized data tables and custom charts for real-time monitoring.</p>
             <p class="meta">Role: Front-end • Live: —</p>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="game" class="container game reveal">
+      <h2>Retro Side Quest</h2>
+      <div class="game-shell">
+        <div class="game-panel">
+          <canvas id="tetris" width="220" height="440" aria-label="Mini Tetris game"></canvas>
+        </div>
+        <div class="game-sidebar">
+          <div class="score-block">
+            <div>Score</div>
+            <strong id="score">0</strong>
+          </div>
+          <div class="score-block">
+            <div>Best</div>
+            <strong id="best-score">0</strong>
+          </div>
+          <button id="start-game" class="btn small">Start</button>
+          <p class="game-help">Keys: ← → move, ↑ rotate, ↓ drop, Space hard drop</p>
         </div>
       </div>
     </section>
