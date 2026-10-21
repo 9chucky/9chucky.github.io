@@ -210,7 +210,7 @@
       merge(current); clearLines();
       current = createPiece();
       if (collides(current, 0, 0)) {
-        gameOver = true; showToast('Game Over');
+        gameOver = true; startButton.textContent = 'Start'; showToast('Game Over');
       }
     }
     return false;
@@ -253,7 +253,7 @@
     resetBoard();
     score = 0; updateScore();
     current = createPiece();
-    gameOver = false; lastTime = 0; dropAccumulator = 0;
+    gameOver = false; lastTime = 0; dropAccumulator = 0; startButton.textContent = 'Restart';
     if (animationId) cancelAnimationFrame(animationId);
     animationId = requestAnimationFrame(gameLoop);
   }
@@ -287,4 +287,5 @@
   startButton.addEventListener('click', startGame);
   bestEl.textContent = String(best);
   resetBoard(); drawBoard();
+  startGame();
 })();
