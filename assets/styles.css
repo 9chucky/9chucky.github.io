@@ -1,147 +1,104 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Chucky — Portfolio</title>
-  <meta name="description" content="Chucky — modern + myth portfolio showcasing previous work." />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;800&family=Press+Start+2P&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/assets/styles.css">
-  <link rel="icon" href="/assets/logo.svg" type="image/svg+xml">
-</head>
-<body>
-  <div class="crt-vignette" aria-hidden="true"></div>
-
-  <header class="site-header">
-    <div class="container">
-      <a class="brand" href="/">
-        <img src="/assets/logo.svg" alt="Chucky" class="logo">
-        <span class="title">Chucky</span>
-      </a>
-      <nav class="nav">
-        <a href="#about">About</a>
-        <a href="#work">Work</a>
-        <a href="#projects">Projects</a>
-        <a href="#game">Game</a>
-        <a href="#contact">Contact</a>
-      </nav>
-      <div class="header-controls">
-        <button id="theme-toggle" class="btn small" aria-pressed="false" title="Toggle theme">Retro Dark</button>
-      </div>
-    </div>
-  </header>
-
-  <main>
-    <section class="hero">
-      <div class="container">
-        <h1 class="hero-title">Chucky — modern craftsmanship, mythic storytelling</h1>
-        <p class="hero-sub"><span id="typewriter"></span></p>
-        <p class="cta"><a id="show-projects" class="btn" href="#projects">See my work</a></p>
-      </div>
-    </section>
-
-    <section id="about" class="container about reveal">
-      <h2>About</h2>
-      <p>Designer & developer blending minimal modern design with myth-inspired storytelling. I focus on clarity, performance, and memorable visuals.</p>
-      <ul class="skills">
-        <li>Front-end: HTML, CSS, JavaScript</li>
-        <li>Frameworks: React / Vue / Svelte</li>
-        <li>Design: UI/UX, branding, motion</li>
-      </ul>
-    </section>
-
-    <section id="work" class="container work reveal">
-      <h2>Previous work</h2>
-      <div class="grid">
-        <article class="card project-card" data-title="Internal LLM Platform" data-desc="Platform for deploying and operating large language models inside teams: model routing, prompt management, and secure APIs. Focused on observability and access controls." tabindex="0">
-          <h3>Internal LLM Platform</h3>
-          <p>Platform for deploying and operating large language models inside teams: model routing, prompt management, and secure APIs to integrate LLMs into internal tools and workflows. Focused on observability, access controls, and developer ergonomics.</p>
-          <p class="tagline">Tech: Python backend • TypeScript frontend — <a href="https://github.com/9chucky/internal-llm-platform" target="_blank" rel="noopener">repo</a></p>
-        </article>
-
-        <article class="card project-card" data-title="Binance Trading Bot" data-desc="Automated trading system with configurable strategies, backtesting, and execution/risk controls. Built for continuous operation with safety limits and logging." tabindex="0">
-          <h3>Binance Trading Bot</h3>
-          <p>Automated trading system for cryptocurrency markets with configurable strategies, backtesting support, and execution/risk controls. Built to run continuously with logging and safety limits to protect capital.</p>
-          <p class="tagline">Tech: Python (strategy + execution) • TypeScript (dashboard) — <a href="https://github.com/9chucky/binance-trading-bot" target="_blank" rel="noopener">repo</a></p>
-        </article>
-
-        <article class="card project-card" data-title="Baby Chuck" data-desc="A TypeScript-first web application combining a modern frontend with Postgres-backed logic and stored procedures. UI and data workflows for a small product/service." tabindex="0">
-          <h3>Baby Chuck</h3>
-          <p>A TypeScript-first web application combining a modern frontend with Postgres-backed logic (PL/pgSQL used for stored procedures). Purpose-built UI and data workflows to support a small product or service.</p>
-          <p class="tagline">Tech: TypeScript • PostgreSQL (PL/pgSQL) — <a href="https://github.com/9chucky/baby_chuck" target="_blank" rel="noopener">repo</a></p>
-        </article>
-      </div>
-      <p class="note">I generated these summaries from your repository names and language composition because I couldn't access private READMEs. If you want richer copy, paste README content or make the repos public and I’ll pull detailed descriptions and screenshots.</p>
-    </section>
-
-    <section id="projects" class="container projects reveal">
-      <h2>Featured projects</h2>
-      <div class="project-cards">
-        <div class="project">
-          <div class="project-media">🔮</div>
-          <div>
-            <h3>Mythic Landing — Visual narrative</h3>
-            <p>A landing experience that uses layered parallax and subtle motion to tell a product story.</p>
-            <p class="meta">Role: Design & front-end • Live: —</p>
-          </div>
-        </div>
-
-        <div class="project">
-          <div class="project-media">⚔️</div>
-          <div>
-            <h3>Forge Platform — Dashboard</h3>
-            <p>Admin dashboard with optimized data tables and custom charts for real-time monitoring.</p>
-            <p class="meta">Role: Front-end • Live: —</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="game" class="container game reveal">
-      <h2>Retro Side Quest</h2>
-      <div class="game-shell">
-        <div class="game-panel">
-          <canvas id="tetris" width="220" height="440" aria-label="Mini Tetris game"></canvas>
-        </div>
-        <div class="game-sidebar">
-          <div class="score-block">
-            <div>Score</div>
-            <strong id="score">0</strong>
-          </div>
-          <div class="score-block">
-            <div>Best</div>
-            <strong id="best-score">0</strong>
-          </div>
-          <button id="start-game" class="btn small">Restart</button>
-          <p class="game-help">Keys: ← → move, ↑ rotate, ↓ drop, Space hard drop</p>
-        </div>
-      </div>
-    </section>
-
-    <section id="contact" class="container contact reveal">
-      <h2>Contact</h2>
-      <p>Want this style for your project or want me to populate the portfolio with real examples? Email me at <a id="email-link" href="mailto:hello@chucky.dev">hello@chucky.dev</a> <button id="copy-email" class="btn small">Copy</button> or open an issue on this repo.</p>
-      <p class="small">Tip: To replace placeholder text, edit <code>index.html</code> in this repository or tell me the details and I’ll update it for you.</p>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="container">
-      <p>© <span id="year"></span> Chucky — Crafted with modern myth.</p>
-    </div>
-  </footer>
-
-  <div id="modal" class="modal" aria-hidden="true">
-    <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="modal-title">
-      <button id="modal-close" class="modal-close" aria-label="Close">×</button>
-      <h3 id="modal-title"></h3>
-      <p id="modal-desc"></p>
-    </div>
-  </div>
-
-  <canvas id="confetti-canvas" class="confetti-canvas" aria-hidden="true"></canvas>
-  <script src="/assets/script.js" defer></script>
-</body>
-</html>
+/* Bright retro on white background with theme support */
+:root{
+  --bg:#ffffff;
+  --bg-deep:#f5f8ff;
+  --panel:#f6f8fb;
+  --muted:#586270;
+  --accent1:#ff4da6;
+  --accent2:#00b8d1;
+  --accent3:#ffd500;
+  --accent4:#8e6cff;
+  --glass: rgba(2,6,23,0.02);
+  --radius:12px;
+  --max:1100px;
+}
+:root[data-theme='dark']{
+  --bg1:#050008;
+  --bg2:#10051d;
+  --bg3:#1a0a2a;
+  --panel:#100d1d;
+  --muted:#d5d2ee;
+  --accent1:#ff4da6;
+  --accent2:#00fff0;
+  --accent3:#ffd500;
+  --accent4:#8e6cff;
+  --glass: rgba(255,255,255,0.03);
+  --bg: #0f0e14;
+  --bg-deep:#140d1f;
+}
+*{box-sizing:border-box}
+html,body{height:100%;margin:0;font-family:'Orbitron', Inter, ui-sans-serif, system-ui, sans-serif;background:var(--bg);color:#0b1220}
+body::before{
+  content:'';position:fixed;inset:0;pointer-events:none;
+  background-image: linear-gradient(rgba(11,17,32,0.02) 1px, transparent 1px), linear-gradient(90deg, rgba(11,17,32,0.02) 1px, transparent 1px);
+  background-size:28px 28px; opacity:0.06;
+}
+body::after{
+  content:'';position:fixed;inset:0;pointer-events:none;
+  background-image:linear-gradient(rgba(11,17,32,0.02) 1px, transparent 1px);
+  background-size:100% 6px; opacity:0.04;
+}
+.container{max-width:var(--max);margin:0 auto;padding:48px 20px}
+.site-header{position:sticky;top:0;z-index:40;background:rgba(255,255,255,0.96);backdrop-filter: blur(4px);border-bottom:1px solid rgba(11,17,32,0.04)}
+.site-header .container{display:flex;align-items:center;justify-content:space-between;padding:12px 20px}
+.brand{display:flex;align-items:center;gap:12px;color:inherit;text-decoration:none}
+.logo{width:40px;height:40px}
+.title{font-weight:800;letter-spacing:0.08em;text-transform:uppercase;color:var(--accent4)}
+.nav a{color:var(--muted);text-decoration:none;margin-left:18px;transition:color .18s ease}
+.nav a:hover{color:var(--accent2)}
+.header-controls{display:flex;align-items:center;gap:8px}
+.hero{padding:96px 0 60px;background:linear-gradient(180deg, rgba(255,77,166,0.03), transparent 30%)}
+.hero-title{font-family:'Press Start 2P', 'Orbitron', monospace;font-size:32px;line-height:1.2;margin:0 0 12px;color:#0b1220}
+.hero-sub{color:var(--muted);max-width:720px;font-size:1.05rem}
+#typewriter{color:var(--accent2);font-weight:700}
+.btn{display:inline-block;background:linear-gradient(90deg, var(--accent1), var(--accent2));padding:12px 18px;border-radius:10px;color:#04121a;text-decoration:none;font-weight:700;border:2px solid rgba(11,17,32,0.04);cursor:pointer;box-shadow:0 8px 20px rgba(0,0,0,0.06);transition:transform .14s ease, box-shadow .14s ease}
+.btn:hover{transform:translateY(-2px)}
+.btn.small{padding:6px 10px;font-size:13px;border-radius:8px}
+.about p,.work p,.game-help,.note,.small{color:var(--muted)}
+.skills{display:flex;gap:12px;flex-wrap:wrap;list-style:none;padding:0;margin:12px 0}
+.skills li{background:var(--panel);padding:8px 12px;border-radius:999px;color:var(--muted);font-size:14px;border:1px solid rgba(11,17,32,0.04)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin-top:18px}
+.card{background:#ffffff;padding:18px;border-radius:var(--radius);border:1px solid rgba(11,17,32,0.06);transition:transform .22s ease,box-shadow .22s ease}
+.card.boxed{border:2px solid rgba(0,184,209,0.18);box-shadow:0 8px 30px rgba(0,184,209,0.04)}
+.card h3{margin:0 0 8px;color:var(--accent4)}
+.tagline{color:var(--muted);font-size:13px}
+.tagline a{color:var(--accent2)}
+.projects .project-cards{display:flex;flex-direction:column;gap:12px}
+.project{display:flex;gap:14px;align-items:center;background:#fff;padding:14px;border-radius:10px;border:1px solid rgba(11,17,32,0.04)}
+.project-media{font-size:34px;width:64px;height:64px;border-radius:10px;display:flex;align-items:center;justify-content:center;background:linear-gradient(180deg,var(--accent1),var(--accent2));box-shadow:0 8px 24px rgba(0,184,209,0.08);color:#071023}
+.site-footer{border-top:1px solid rgba(11,17,32,0.04);padding:18px 0;margin-top:40px;color:var(--muted)}
+.game-shell{display:flex;gap:20px;align-items:flex-start;flex-wrap:wrap;background:linear-gradient(180deg,#fff,#f7fafd);border:2px solid rgba(11,17,32,0.06);padding:18px;border-radius:var(--radius);box-shadow:0 12px 30px rgba(0,0,0,0.04)}
+.game-panel{background:#f2f6ff;border-radius:10px;padding:12px;border:2px solid rgba(11,17,32,0.08)}
+#tetris{display:block;width:220px;height:440px;border-radius:8px;background:#ffffff;box-shadow:inset 0 0 18px rgba(0,0,0,0.04)}
+.game-sidebar{display:flex;flex-direction:column;gap:12px;min-width:150px}
+.score-block{background:#fff;border:1px solid rgba(11,17,32,0.06);border-radius:10px;padding:12px;box-shadow:0 8px 20px rgba(0,0,0,0.03)}
+.score-block div{color:var(--muted);font-size:0.78rem;text-transform:uppercase;letter-spacing:0.08em}
+.score-block strong{display:block;font-size:1.7rem;margin-top:8px;color:var(--accent4)}
+.game-help{margin-top:6px;font-size:0.82rem;line-height:1.6}
+.project-card:hover{transform:translateY(-6px) scale(1.01);box-shadow:0 16px 40px rgba(11,17,32,0.06)}
+.project-card:focus{outline:2px solid rgba(14,165,233,0.22);transform:translateY(-6px)}
+.reveal{opacity:0;transform:translateY(8px);transition:opacity .5s ease,transform .5s ease}
+.reveal.visible{opacity:1;transform:none}
+.modal{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(11,17,32,0.5);padding:24px;opacity:0;pointer-events:none;transition:opacity .18s ease}
+.modal[aria-hidden='false']{opacity:1;pointer-events:auto}
+.modal-content{background:var(--panel);padding:22px 20px 18px;border-radius:12px;max-width:680px;width:100%;box-shadow:0 10px 30px rgba(11,17,32,0.06);position:relative;border:1px solid rgba(11,17,32,0.06)}
+.modal-close{position:absolute;right:12px;top:8px;background:transparent;border:none;color:var(--muted);font-size:24px;cursor:pointer}
+#modal-title{color:var(--accent4);font-family:'Press Start 2P', monospace;font-size:1rem;line-height:1.6}
+#modal-desc{color:var(--muted);line-height:1.6}
+.toast{position:fixed;right:18px;bottom:18px;background:#ffffff;color:#0b1220;padding:10px 14px;border-radius:10px;border:1px solid rgba(11,17,32,0.06);box-shadow:0 8px 24px rgba(0,0,0,0.06)}
+.confetti-canvas{position:fixed;left:0;top:0;width:100%;height:100%;pointer-events:none;z-index:9999}
+.crt-vignette{display:none}
+:root[data-theme='dark'] body{background:linear-gradient(180deg, var(--bg1), var(--bg2) 40%, var(--bg3));color:#f5f8ff}
+:root[data-theme='dark'] .site-header{background:rgba(11,5,18,0.75)}
+:root[data-theme='dark'] body::before{background-image:linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px),linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px);opacity:0.25}
+:root[data-theme='dark'] body::after{background-image:linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px);opacity:0.12}
+:root[data-theme='dark'] .crt-vignette{display:block;position:fixed;inset:0;pointer-events:none;background:radial-gradient(ellipse at center, rgba(0,0,0,0) 60%, rgba(0,0,0,0.45));z-index:5}
+:root[data-theme='dark'] .hero-title{color:var(--accent3)}
+:root[data-theme='dark'] .game-shell{background:linear-gradient(180deg,#110c1d,#171329);border-color:rgba(255,255,255,0.08)}
+:root[data-theme='dark'] .game-panel{background:#1a1227;border-color:rgba(255,255,255,0.08)}
+:root[data-theme='dark'] #tetris{background:#110d19;box-shadow:inset 0 0 18px rgba(0,255,240,0.04)}
+:root[data-theme='dark'] .score-block{background:#181321;border-color:rgba(255,255,255,0.06)}
+@media(max-width:700px){.game-shell{flex-direction:column;align-items:center}#tetris{width:200px;height:400px}}
+@media(min-width:900px){.hero-title{font-size:48px}}
+code{background:rgba(11,17,32,0.04);padding:4px 6px;border-radius:6px;color:#0b1220}
+.small{font-size:13px}
